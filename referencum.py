@@ -42,7 +42,22 @@ def main():
     referendum_results_df = \
     referendum_results_df.drop(columns = ['CH leave estimate', 'Known leave', 'Known leave'])
 
+    #Reindexing dataframe
+    referendum_results_df= referendum_results_df.reset_index()
     print(referendum_results_df)
+    for column in referendum_results_df.columns:
+        print(column)
+
+    print(referendum_results_df[:10])
+
+    #Plotting dataframe results
+
+    # referendum_results_df.plot.scatter(x='LEAVE FIGURE TO USE', y='Known result')
+    referendum_results_df.plot.line(x='LEAVE FIGURE TO USE')
+    # plot.show(block=True)
+    
+
+
     #Reading in age descriptions in to data frame
 
     #Calculating mean, median and mode for ages
