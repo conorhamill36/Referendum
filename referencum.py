@@ -8,6 +8,7 @@ def pritn(x):
 def main():
 
     import pandas
+    import matplotlib.pyplot as plt
 
     print("Hello voting")
 
@@ -52,10 +53,10 @@ def main():
 
     #Plotting dataframe results
 
-    # referendum_results_df.plot.scatter(x='LEAVE FIGURE TO USE', y='Known result')
-    referendum_results_df.plot.line(x='LEAVE FIGURE TO USE')
-    # plot.show(block=True)
-    
+    sp = referendum_results_df.plot.scatter(x='LEAVE FIGURE TO USE', y='Known result')
+    # sp = referendum_results_df.plot.line(x='LEAVE FIGURE TO USE')
+    sp.plot()
+    plt.show()
 
 
     #Reading in age descriptions in to data frame
